@@ -1,4 +1,4 @@
-# Manual for Arduino Weather-Based LED Control
+# Integrating Weather Data with Arduino: A Step-by-Step Guide to Controlling LED Strips
 
 ## Table of Contents
 1. **Introduction**
@@ -74,8 +74,8 @@ Here is a simple example code that you can use. Copy and paste this into your Ar
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 // Wi-Fi credentials
-const char* ssid = "Kyra(^_−)−☆"; // Your Wi-Fi name
-const char* password = "hallohallohallo"; // Your Wi-Fi password
+const char* ssid = "yourwifi"; // Your Wi-Fi name
+const char* password = "yourpassword"; // Your Wi-Fi password
 
 // OpenWeatherMap API credentials
 const String apiKey = "58e5ba5dccabe96136790bae5ce55a65"; // Your API key
@@ -170,6 +170,7 @@ void setLEDColor(int red, int green, int blue) {
   }
   pixels.show(); // Update the strip
 }
+```
 
 ## 6. Step 4: Testing and Troubleshooting
 
@@ -191,6 +192,3 @@ If the temperature does not change the LED colors, ensure the API key is valid a
 ## 7. Conclusion
 
 You have successfully connected your Arduino to the OpenWeatherMap API to control an LED strip based on temperature. This project is a great way to learn about IoT (Internet of Things) applications and real-time data integration. Experiment with the code and feel free to make improvements or adjustments to fit your preferences!
-
-
-
